@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Sistema de Imigração</h1>
+    Pais de Origem <input type="text" name="txtimi" id="txtimi">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id = 'res'>
+
+    </div>
+    <script>
+        function ver () {
+            var imi = document.getElementById("txtimi")
+            var res = document.querySelector('div#res')
+            var imig = String (imi.value)
+            res.innerHTML = `<p>Seu Pais de origem é <strong>${imig}</strong></p>`
+            if (imig == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
